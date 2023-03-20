@@ -42,7 +42,7 @@ Animal Animal::create_new() {
     int mark[2*n];
     fill(mark, mark+2*n, 0); // set mark zero
 
-    Animal ans;
+    Animal ans(n);
 
     for (int i = 0; i < n;) {
         int j = rand() % n;
@@ -60,8 +60,9 @@ Animal Animal::operator+(Animal other) {
         throw string("not equal number of chromosomes");
     if (chromosomes.size() % 2 == 0)
         throw string("number of chromosomes must be even");
-    Animal a = create_new(), b = other.create_new(), ans;
+        
     int n = chromosomes.size();
+    Animal a = create_new(), b = other.create_new(), ans(n);
 
     bool mark1[n], mark2[n];
     fill(mark1, mark1 + n, false);
@@ -89,5 +90,26 @@ Animal Animal::operator+(Animal other) {
 }
 
 string Animal::biggest_substr() const {
+    string ans = "", a = chromosomes[0].get("DNA");
 
+    for (int i = 0; i < a.size(); i++) {
+        for (int j = a.size(); (j >= i) && (j-i > ans.size()); j--) {
+            // string i-j in a
+            // for all chromosomes
+            bool add = true;
+            string sub = a.substr(i, j-i);
+            for (int k = 1; k < chromosomes.size(); k++) {
+                // if sub not in chromosomes[k] -> cancel
+                if (chromosomes[k].get("DNA").find(sub) == string::npos) {
+                    add = false;
+                    break;
+                }
+            }
+            if (add) {
+                ans = sub;
+            }
+        }
+    }
+
+    return ans;
 }

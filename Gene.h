@@ -26,7 +26,7 @@ public:
 
     void jahesh_reverse(string name, string rev);
 
-private:
+protected:
     map<string, string> var;
     
 };

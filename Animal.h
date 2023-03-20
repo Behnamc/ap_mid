@@ -1,12 +1,12 @@
 #pragma once
 #include <iostream>
-#include "Virus.h"
 #include "Cell.h"
 using namespace std;
 
 
 class Animal: public Cell{
 public:
+    Animal(int n): Cell(n) {}
     // between 0-1
     float similar(Animal other);
 

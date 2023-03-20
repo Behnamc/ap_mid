@@ -10,6 +10,7 @@ void menu() {
 
 
 int main() {
+    Animal animal(3);
 
 
 }
