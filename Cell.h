@@ -1,11 +1,10 @@
 #pragma once
-#include "Gene.h"
-#include <iostream>
-#include <vector>
-using namespace std;
+#include "Gene.cpp"
 
 class Cell {
 public:
+	Cell() {}
+	
 	Cell(int n);
 
 	bool del_chromosome();

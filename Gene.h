@@ -1,27 +1,27 @@
 #pragma once
-#include "functions.h"
-#include <iostream>
-#include <map>
+#include "functions.cpp"
 using namespace std;
 
 
 class Gene{
 public:
-    Gene(string dna="", string dna2="", string rna="");
+    Gene() {}
+
+    Gene(string dna, string dna2, string rna);
 
     void set_dna2();
 
-    void set(string name, string value, string value2="");
+    void set(string name, string dna, string dna2);
 
-    string get(string name) const;
+    string get(string name);
 
-    void set_dna_from_rna();
+    string dna_from_rna();
 
     void jahesh_small(string name, 
         char first, char second, int n);
 
     void jahesh_big(string name, 
-        string first, string second, int n);
+        string first, string second);
 
 
     void jahesh_reverse(string name, string rev);

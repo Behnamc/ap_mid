@@ -1,3 +1,4 @@
+#pragma once
 #include "Cell.h"
 
 Cell::Cell(int n) {
@@ -6,10 +7,10 @@ Cell::Cell(int n) {
 
 bool Cell::del_chromosome() {
 	for (auto &gene: chromosomes) {
-		string s = a.val["DNA"];
+		string s = gene.get("DNA");
 		int d = 0;
 		for (int i = 0; i < s.size(); i++) {
-			if (s[i] != mokamel(a.var["DNA2"][i]))
+			if (s[i] != mokamel(gene.get("DNA2")[i]))
 				d++;
 		}
 		if (d > 5) {
@@ -35,8 +36,8 @@ bool Cell::del_chromosome() {
 }	
 
 void Cell::jahesh_big(string s1, int n, string s2, int m) {
-	chromosomes[n].jahesh_big("DNA", s1, s2, 1);
-	chromosomes[m].jahesh_big("DNA", s2, s1, 1);
+	chromosomes[n].jahesh_big("DNA", s1, s2);
+	chromosomes[m].jahesh_big("DNA", s2, s1);
 }
 
 void Cell::jahesh_small(char first, char second, int n, int m) {
@@ -53,7 +54,7 @@ void Cell::palindrome(int n) {
 	for (int i = 0; i < s.size(); i++) {
 		for (int j = 2; j+i <= s.size(); j++) {
 			if (
-				is_palindrome(substr(s, i, j))
+				is_palindrome(s.substr(i, j))
 			) {
 				cout << s << '\n';
 			}

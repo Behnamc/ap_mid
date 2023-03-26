@@ -89,7 +89,7 @@ Animal Animal::operator+(Animal other) {
     return ans;
 }
 
-string Animal::biggest_substr() const {
+string Animal::biggest_substr() {
     string ans = "", a = chromosomes[0].get("DNA");
 
     for (int i = 0; i < a.size(); i++) {

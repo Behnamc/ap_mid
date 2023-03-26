@@ -1,7 +1,5 @@
 #pragma once
-#include <iostream>
-#include "Cell.h"
-using namespace std;
+#include "Cell.cpp"
 
 
 class Animal: public Cell{
@@ -16,7 +14,7 @@ public:
 
     Animal operator+(Animal other);
 
-    string biggest_substr() const;
+    string biggest_substr();
 
 private:
 

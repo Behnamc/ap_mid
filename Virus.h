@@ -1,7 +1,5 @@
 #pragma once
-#include <iostream>
-#include "Animal.h"
-using namespace std;
+#include "Animal.cpp"
 
 class Virus: Gene{
 public:

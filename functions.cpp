@@ -1,4 +1,6 @@
+#pragma once
 #include "functions.h"
+using namespace std;
 
 char mokamel(char c) {
     if (c == 'A') {
@@ -22,7 +24,7 @@ string mokamel(string s) {
     return ans;
 }
 
-void replace(string &s, char first, char rep, int n=1) {
+void replace_char(string &s, char first, char rep, int n=1) {
     for (int i = 0; i < s.size(); i++) {
         if (n != 0 and s[i] == first) {
             s[i] = rep;
