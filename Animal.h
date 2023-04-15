@@ -16,6 +16,9 @@ public:
 
     string biggest_substr();
 
+    //• بازنویسی متد مرگ سلولی. 
+
+
 private:
 
     friend class Virus;

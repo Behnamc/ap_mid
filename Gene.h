@@ -30,3 +30,4 @@ protected:
     map<string, string> var;
     
 };
+
