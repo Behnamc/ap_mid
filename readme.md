@@ -1,6 +1,8 @@
-!Class of Life(https://github.com/Behnamc/ap_mid/blob/main/img/title.png?raw=true)
 
 
+<p align="center">
+        <img src=img/title.jpg>
+</p>
 
 gene new <dna> <dna2> <rna>
 gene <num> setdna2
