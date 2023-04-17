@@ -42,7 +42,7 @@ Animal Animal::create_new() {
     int mark[2*n];
     fill(mark, mark+2*n, 0); // set mark zero
 
-    Animal ans(n);
+    Animal ans(0);
 
     for (int i = 0; i < n;) {
         int j = rand() % n;

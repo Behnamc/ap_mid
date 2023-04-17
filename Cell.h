@@ -19,6 +19,6 @@ public:
 
 	void palindrome(int n);
 
-protected:
+// protected:
 	vector<Gene> chromosomes; // RNA = NULL
 };

@@ -7,11 +7,11 @@ class Gene{
 public:
     Gene() {}
 
-    Gene(string dna, string dna2, string rna);
+    Gene(string dna, string dna2="", string rna="");
 
     void set_dna2();
 
-    void set(string name, string dna, string dna2);
+    void set(string name, string dna, string dna2="");
 
     string get(string name);
 
